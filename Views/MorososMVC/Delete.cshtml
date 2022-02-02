@@ -1,0 +1,45 @@
+﻿@model StockManagerAC.Models.Moroso
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar Moroso</h1>
+
+<h3>Seguro que quieres borrar este Registro? Si lo haces no lo volveras a Recuperar</h3>
+<div>
+    <h4>Moroso</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Detalle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Detalle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Debe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Debe)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Ver Lista de Morosos</a>
+    </form>
+</div>
